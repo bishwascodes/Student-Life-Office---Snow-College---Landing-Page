@@ -1,69 +1,133 @@
-:root{
-     --blue: #1E376C;
-     --dark-blue: #1c3163;
-     --orange: #F47920;
-     --light-orange: #FAA634;
-     --grey: #E6E6E6;
+:root {
+    --blue: #1E376C;
+    --dark-blue: #1c3163;
+    --orange: #F47920;
+    --light-orange: #FAA634;
+    --grey: #E6E6E6;
+    --green: #28A745;
 }
-header{
+
+header {
     background: var(--blue);
-    padding:1rem 2rem;
-    .header-left-logo{
+    padding: 1rem 2rem;
+
+    .header-left-logo {
         max-height: 50px;
     }
 }
+
 /* Utility Classes */
-.object-fit-cover{
+.object-fit-cover {
     object-fit: cover;
 }
-.bg-gray{
+
+.bg-gray {
     background-color: var(--grey);
 }
-.bg-light-orange{
+
+.bg-light-orange {
     background-color: var(--light-orange);
 }
-.bg-orange{
+
+.bg-orange {
     background-color: var(--orange);
 }
-.bg-blue{
+
+.bg-blue {
     background-color: var(--blue);
 }
-.bg-dark-blue{
+
+.bg-dark-blue {
     background-color: var(--dark-blue);
 }
-.text-dark-blue{
+
+.bg-green {
+    background: var(--green);
+}
+
+.text-dark-blue {
     color: var(--dark-blue);
 }
-.font-bebas-neue{
+
+.font-bebas-neue {
     font-family: "bebas-neue";
 }
-.font-museo-sans{
+
+.font-museo-sans {
     font-family: "museo-sans";
 }
-.box-shadow-custom{
+
+.box-shadow-custom {
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
-.btn-orange{
+
+.btn-orange {
+    font-size: 1.125rem;
     background-color: var(--orange);
-    color:var(--dark-blue);
+    color: var(--dark-blue);
     font-family: "bebas-neue";
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
     border-radius: 2rem;
+    transition: all 0.5s ease-in;
+    &:hover{
+        background-color: transparent;
+        border: 2px solid var(--orange);
+        transform: translateY(-2px) scale(1.01);
+        color: var(--grey);
+    }
 }
 
+.btn-blue{
+    font-size: 1.125rem;
+    background-color: var(--dark-blue);
+    color: var(--grey);
+    font-family: "bebas-neue";
+    padding-left: 7rem;
+    padding-right: 7rem;
+    border-radius: 2rem;
+    transition: all 0.5s ease-in;
+    &:hover{
+        background-color: transparent;
+        border: 2px solid var(--dark-blue);
+        transform: translateY(-2px) scale(1.01);
+        color: var(--dark-blue);
+    }
+}
 
-section.our-mission{
-    .our-mission-left{
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.btn-hollow {
+    border: 1px solid var(--orange);
+    padding: 1rem 5rem;
+    border-radius: 30px;
+    transition: all 0.5s ease-in, transform 0.1s ease;
+
+    &:hover {
+        background: var(--orange);
+        color: var(--dark-blue);
+        transform: scale(0.99);
+    }
+}
+
+.other-ways-to-involve-links{
+    gap:3rem;
+}
+
+section.our-mission {
+    .our-mission-left {
         padding: 2rem;
         padding-top: 5rem;
         padding-bottom: 4rem;
         background-color: var(--light-orange);
         color: #1E376C;
         position: relative;
-        &::after{
-            content:"";
-            clip-path: polygon(0 0, 0% 100%,20% 0);
+
+        &::after {
+            content: "";
+            clip-path: polygon(0 0, 0% 100%, 20% 0);
             background: var(--light-orange);
             height: 100%;
             width: 100%;
@@ -74,7 +138,8 @@ section.our-mission{
         }
 
         font-size: 20px;
-        .mission-header{
+
+        .mission-header {
             margin-bottom: 2rem;
             color: #FFF;
             background-color: var(--dark-blue);
@@ -84,52 +149,85 @@ section.our-mission{
             left: -2.25rem;
             border-right: 5px solid #F47821;
             border-bottom: 2px solid #F47821;
-            h2{
+
+            h2 {
                 margin-bottom: 0;
                 font-size: 1.5rem;
             }
         }
-        p{
+
+        p {
             font-size: 1rem;
         }
     }
-   
+
 }
 
-section.our-vision{
-    .header-title{
+section.our-vision {
+    .header-title {
         border-left: 5px solid var(--light-orange);
         border-top: 5px solid var(--light-orange);
         border-right: 5px solid var(--light-orange);
         box-sizing: border-box;
     }
-    .visions-list{
+
+    .visions-list {
         text-align: center;
+
         li {
             font-size: 2rem;
             list-style-type: none;
             padding-top: 1.5rem;
         }
-        i{
+
+        i {
             padding-right: 1rem;
         }
     }
 }
 
+.info-card {
+    position: relative;
 
+    .info-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 2.5rem;
+    }
+}
 
-@media screen and ( max-width: 768px ) {
-    .our-mission-left::after{
+.join-student-life-links {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    li {
+        margin-top: 1.5rem;
+    }
+
+    a {
+        color: inherit;
+        line-height: 1.5rem;
+        &:hover{
+            color: var(--blue);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .our-mission-left::after {
         display: none;
         list-style-type: armenian;
     }
-    .our-mission-left{
-        padding-top: unset!important;
-        padding-bottom: unset!important;
-        padding: 1rem!important;
-        .mission-header{
-            left: 0!important;
-            display: block!important;
+
+    .our-mission-left {
+        padding-top: unset !important;
+        padding-bottom: unset !important;
+        padding: 1rem !important;
+
+        .mission-header {
+            left: 0 !important;
+            display: block !important;
         }
+
     }
 }
