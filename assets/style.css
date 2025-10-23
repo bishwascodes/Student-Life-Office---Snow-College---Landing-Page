@@ -70,7 +70,8 @@ header {
     padding-right: 7rem;
     border-radius: 2rem;
     transition: all 0.5s ease-in;
-    &:hover{
+
+    &:hover {
         background-color: transparent;
         border: 2px solid var(--orange);
         transform: translateY(-2px) scale(1.01);
@@ -78,7 +79,7 @@ header {
     }
 }
 
-.btn-blue{
+.btn-blue {
     font-size: 1.125rem;
     background-color: var(--dark-blue);
     color: var(--grey);
@@ -87,7 +88,8 @@ header {
     padding-right: 7rem;
     border-radius: 2rem;
     transition: all 0.5s ease-in;
-    &:hover{
+
+    &:hover {
         background-color: transparent;
         border: 2px solid var(--dark-blue);
         transform: translateY(-2px) scale(1.01);
@@ -112,8 +114,22 @@ header {
     }
 }
 
-.other-ways-to-involve-links{
-    gap:3rem;
+.title-and-breadcrumbs {
+    padding-top: 3rem;
+
+    a {
+        color: var(--orange);
+    }
+}
+
+.other-ways-to-involve-links {
+    gap: 3rem;
+}
+
+.cover-above-the-breadcrumb {
+    height: 475px;
+    background: url('./img/Student-Life-Banner.png');
+    background-size: cover;
 }
 
 section.our-mission {
@@ -193,13 +209,14 @@ section.our-vision {
         position: absolute;
         top: 0;
         right: 0;
-        margin: 2.5rem;
+        margin: 2.5%;
     }
 }
 
 .join-student-life-links {
     margin-top: 2rem;
     margin-bottom: 0;
+
     li {
         margin-top: 1.5rem;
     }
@@ -207,7 +224,8 @@ section.our-vision {
     a {
         color: inherit;
         line-height: 1.5rem;
-        &:hover{
+
+        &:hover {
             color: var(--blue);
         }
     }
@@ -217,6 +235,11 @@ section.our-vision {
     .our-mission-left::after {
         display: none;
         list-style-type: armenian;
+    }
+
+    .cover-above-the-breadcrumb {
+        height: 15vh;
+
     }
 
     .our-mission-left {
@@ -229,5 +252,12 @@ section.our-vision {
             display: block !important;
         }
 
+    }
+
+    .have-suggestion-section {
+        .d-flex {
+            gap: 2rem;
+            justify-content: center !important;
+        }
     }
 }
