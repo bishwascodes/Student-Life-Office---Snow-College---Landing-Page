@@ -1,0 +1,135 @@
+:root{
+     --blue: #1E376C;
+     --dark-blue: #1c3163;
+     --orange: #F47920;
+     --light-orange: #FAA634;
+     --grey: #E6E6E6;
+}
+header{
+    background: var(--blue);
+    padding:1rem 2rem;
+    .header-left-logo{
+        max-height: 50px;
+    }
+}
+/* Utility Classes */
+.object-fit-cover{
+    object-fit: cover;
+}
+.bg-gray{
+    background-color: var(--grey);
+}
+.bg-light-orange{
+    background-color: var(--light-orange);
+}
+.bg-orange{
+    background-color: var(--orange);
+}
+.bg-blue{
+    background-color: var(--blue);
+}
+.bg-dark-blue{
+    background-color: var(--dark-blue);
+}
+.text-dark-blue{
+    color: var(--dark-blue);
+}
+.font-bebas-neue{
+    font-family: "bebas-neue";
+}
+.font-museo-sans{
+    font-family: "museo-sans";
+}
+.box-shadow-custom{
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.btn-orange{
+    background-color: var(--orange);
+    color:var(--dark-blue);
+    font-family: "bebas-neue";
+    padding-left: 5rem;
+    padding-right: 5rem;
+    border-radius: 2rem;
+}
+
+
+section.our-mission{
+    .our-mission-left{
+        padding: 2rem;
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+        background-color: var(--light-orange);
+        color: #1E376C;
+        position: relative;
+        &::after{
+            content:"";
+            clip-path: polygon(0 0, 0% 100%,20% 0);
+            background: var(--light-orange);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            z-index: 1;
+        }
+
+        font-size: 20px;
+        .mission-header{
+            margin-bottom: 2rem;
+            color: #FFF;
+            background-color: var(--dark-blue);
+            padding: 1rem 2.5rem;
+            display: inline-block;
+            position: relative;
+            left: -2.25rem;
+            border-right: 5px solid #F47821;
+            border-bottom: 2px solid #F47821;
+            h2{
+                margin-bottom: 0;
+                font-size: 1.5rem;
+            }
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+   
+}
+
+section.our-vision{
+    .header-title{
+        border-left: 5px solid var(--light-orange);
+        border-top: 5px solid var(--light-orange);
+        border-right: 5px solid var(--light-orange);
+        box-sizing: border-box;
+    }
+    .visions-list{
+        text-align: center;
+        li {
+            font-size: 2rem;
+            list-style-type: none;
+            padding-top: 1.5rem;
+        }
+        i{
+            padding-right: 1rem;
+        }
+    }
+}
+
+
+
+@media screen and ( max-width: 768px ) {
+    .our-mission-left::after{
+        display: none;
+        list-style-type: armenian;
+    }
+    .our-mission-left{
+        padding-top: unset!important;
+        padding-bottom: unset!important;
+        padding: 1rem!important;
+        .mission-header{
+            left: 0!important;
+            display: block!important;
+        }
+    }
+}
